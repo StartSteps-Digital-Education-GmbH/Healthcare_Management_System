@@ -1,51 +1,41 @@
-import express from 'express';
+// Step 1: Import the Express framework to create a web server
 
-const router = express.Router();
+// Step 2: Create a new router instance to define and handle routes for doctor-related operations
 
-// Doctor interface to define the structure of a doctor
-interface Doctor {
-    id: number;
-    name: string;
-    specialty: string;
-    availability: string[];
-}
+// Step 3: Define a Doctor interface to specify the structure of a doctor object
 
-// Mock database (in-memory storage)
-let doctors: Doctor[] = [];
+// Step 4: Create a mock database (in-memory storage) to temporarily hold doctor data
 
-// Route to create a new doctor
-router.post('/', (req, res) => {
-    const { name, specialty, availability } = req.body;
-    const newDoctor: Doctor = {
-        id: doctors.length + 1, // Simple ID generation
-        name,
-        specialty,
-        availability,
-    };
-    doctors.push(newDoctor); // Add doctor to the mock database
-    res.status(201).send(newDoctor); // Respond with the created doctor
-});
+// Step 5: Define a route to create a new doctor
 
-// Route to get all doctors
-router.get('/', (req, res) => {
-    res.status(200).send(doctors); // Respond with the list of doctors
-});
+    // Step 5.1: Extract doctor details (name, specialty, availability) from the request body
 
-// Route to get a doctor by ID
-router.get('/:id', (req, res) => {
-    const doctorId = parseInt(req.params.id);
-    const doctor = doctors.find(d => d.id === doctorId);
-    if (!doctor) {
-        return res.status(404).send({ message: 'Doctor not found' });
-    }
-    res.status(200).send(doctor); // Respond with the found doctor
-});
+    // Step 5.2: Create a new doctor object with a unique ID and the extracted details
 
-// Route to delete a doctor
-router.delete('/:id', (req, res) => {
-    const doctorId = parseInt(req.params.id);
-    doctors = doctors.filter(d => d.id !== doctorId); // Remove doctor
-    res.status(204).send(); // Respond with no content
-});
+    // Step 5.3: Add the new doctor to the mock database
 
-export default router;
+    // Step 5.4: Respond with the created doctor object and a 201 status code indicating successful creation
+
+// Step 6: Define a route to get all doctors
+
+    // Step 6.1: Respond with the list of all doctors and a 200 status code indicating success
+
+// Step 7: Define a route to get a specific doctor by their ID
+
+    // Step 7.1: Extract the doctor ID from the request parameters
+
+    // Step 7.2: Search for the doctor in the mock database using the extracted ID
+
+    // Step 7.3: If the doctor is not found, respond with a 404 status code and an error message
+
+    // Step 7.4: Respond with the found doctor object and a 200 status code indicating success
+
+// Step 8: Define a route to delete a doctor by their ID
+
+    // Step 8.1: Extract the doctor ID from the request parameters
+
+    // Step 8.2: Remove the doctor from the mock database using the filter method
+
+    // Step 8.3: Respond with no content and a 204 status code indicating successful deletion
+
+// Step 9: Export the router for use in the main server file
