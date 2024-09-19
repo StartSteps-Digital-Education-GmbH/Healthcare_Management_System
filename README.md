@@ -8,6 +8,23 @@ In this exercise, we will create two microservices:
 
 Microservices architecture allows us to build applications as a collection of small, independent services that communicate over a network. This modular approach enhances flexibility, scalability, and maintainability.
 
+
+### Directory Structure
+
+```
+healthcare-management-system/
+├── src/
+│   ├── patient-service/
+│   │   ├── patientRoutes.ts
+│   │   └── server.ts
+│   └── doctor-service/
+│       ├── doctorRoutes.ts
+│       └── server.ts
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+
 ## Step 1: Set Up the Project
 
 ### 1. Open Your Terminal
