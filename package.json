@@ -1,20 +1,20 @@
 {
-  "name": "healthcare-management-system",
-  "version": "1.0.0",
-  "description": "A healthcare management system with microservices",
-  "main": "index.js",
-  "type": "module",
+  "name": "healthcare-management-system", // Name of the project
+  "version": "1.0.0", // Version of the project
+  "description": "A healthcare management system with microservices", // Description of the project
+  "main": "index.js", // Main entry point of the application
+  "type": "module", // Specifies that we are using ES module syntax
   "scripts": {
-    "build": "tsc",
-    "dev": "ts-node src/patient-service/server.ts"
+    "build": "tsc", // Command to compile TypeScript files
+    "dev": "ts-node src/patient-service/server.ts" // Command to run the patient service directly
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1" // Express framework for building web applications
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/node": "^18.0.0",
-    "@types/express": "^4.17.13",
-    "ts-node": "^10.0.0"
+    "typescript": "^5.0.0", // TypeScript for type safety
+    "@types/node": "^18.0.0", // Type definitions for Node.js
+    "@types/express": "^4.17.13", // Type definitions for Express
+    "ts-node": "^10.0.0" // Tool to run TypeScript files directly
   }
 }
