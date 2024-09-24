@@ -151,4 +151,15 @@ By using these methods, you can connect different microservices to create a comp
 
 Now that you've learned how to build and connect microservices, I encourage you to dive in and experiment with the code! Try making changes, adding new features, or even creating additional microservices. Your creativity and exploration will help you understand the power of microservices and prepare you for real-life software development challenges.
 
+## Step 9: Use MongoDB in Modal and controller
+Create a Database in MongoDB server and link it to your project, modify the modal and controller to store data in MongoDB.
+
+## Step 10: Use Joi or Express Validator as Middleware
+
+## Step 11: Deploy your project in serverless mode to Vercel:
+Create a Serverless function for each service and deploy it to Vercel.
+
+## Step 12: Practice Microservices Communication using HTTP requests.
+
+
 **_Happy coding!_** 👩‍💻 😊
