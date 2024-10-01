@@ -161,6 +161,10 @@ Create a Serverless function for each service and deploy it to Vercel.
 
 ## Step 12: Practice Microservices Communication using HTTP requests.
 
-## Step 13: Without making any changes in Mongo DB models, create a new folder for SQL database and Entities, and integrate it to our current services using typeOrm 
+## Step 13: Use TypeOrm and Sqlite in the project:
+
+Create a new branch and a folder for SQL database and Entities
+
+Use TypeOrm in our current services
 
 **_Happy coding!_** 👩‍💻 😊
