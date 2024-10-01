@@ -137,7 +137,7 @@ In this exercise, we learned how to build a healthcare management system using m
 
 To make a complete application with multiple microservices, you can connect them in the following ways:
 
-1. **API Gateway**: Use an API Gateway as a single entry point for all client requests. The API Gateway routes requests to the appropriate microservices, handles authentication, and manages cross-cutting concerns like logging and monitoring. This simplifies client interactions and provides a unified interface.
+1. **API Gateway**: Use an API Gateway as a single entry point for all client requests. The API Gateway routes requests to the appropriate microservices handles authentication, and manages cross-cutting concerns like logging and monitoring. This simplifies client interactions and provides a unified interface.
 
 2. **Service Communication**: Microservices can communicate with each other using lightweight protocols such as HTTP/REST or messaging queues (e.g., RabbitMQ, Kafka). For example, the Patient Service can notify the Doctor Service when a new appointment is booked.
 
@@ -145,7 +145,7 @@ To make a complete application with multiple microservices, you can connect them
 
 4. **Service Discovery**: Implement a service discovery mechanism that allows microservices to find and communicate with each other dynamically.
 
-5. **Orchestration**: Use orchestration tools (like Kubernetes) to manage the deployment, scaling, and operation of your microservices.
+5. **Orchestration**: Use orchestration tools (like Kubernetes) to manage your microservices' deployment, scaling, and operation.
 
 By using these methods, you can connect different microservices to create a complete application that offers all the features users need. This approach makes your application flexible and easier to manage.
 
@@ -161,5 +161,6 @@ Create a Serverless function for each service and deploy it to Vercel.
 
 ## Step 12: Practice Microservices Communication using HTTP requests.
 
+## Step 13: Without making any changes in Mongo DB models, create a new folder SQL database and Entities, and integrate it to our current services using typeOrm 
 
 **_Happy coding!_** 👩‍💻 😊
