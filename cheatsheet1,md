@@ -1,0 +1,121 @@
+Here's a cheat sheet that will work as a hint for each step in the Healthcare Management System microservices exercise:
+
+---
+
+## **Healthcare Management System Cheat Sheet**
+
+### **Overview**
+- **Microservices**:
+  - **Patient Service**: Handles patient-related data and operations.
+  - **Doctor Service**: Manages doctor profiles and schedules.
+
+### **Step 1: Set Up the Project**
+1. **Terminal Setup**: Ensure Node.js and npm are installed.
+2. **Create Project Directory**: `mkdir healthcare-management-system`
+3. **Initialize Node Project**: Run `npm init -y` to create `package.json`.
+4. **Update `package.json`**: 
+   - Add `"type": "module"` for ES module support.
+   - Update scripts with:
+     - `"build": "tsc"`
+     - `"dev": "ts-node src/patient-service/server.ts"`
+5. **Install Required Packages**: 
+   - `npm install express typescript @types/node @types/express ts-node`
+6. **Configure TypeScript**: Run `tsc --init` and adjust:
+   - `"target": "ES2020"`
+   - `"module": "NodeNext"`
+   - `"rootDir": "./src"`
+   - `"outDir": "./build"`
+
+### **Step 2: Configure TypeScript**
+1. **Edit `tsconfig.json`**:
+   - Set `"strict": true` for strict type-checking.
+   - Set `"esModuleInterop": true` to allow imports from CommonJS.
+
+### **Step 3: Create Directory Structure**
+1. **Create `src` folder**: This will store the source code.
+2. **Create Services Folders**:
+   - `src/patient-service/`
+   - `src/doctor-service/`
+3. **Create Service Files**:
+   - `src/patient-service/server.ts`, `src/patient-service/patientRoutes.ts`
+   - `src/doctor-service/server.ts`, `src/doctor-service/doctorRoutes.ts`
+
+### **Step 4: Build the Patient Service**
+1. **Set up Patient Server**: 
+   - Use `express()` to create the server.
+   - Use `app.use(express.json())` for JSON parsing.
+2. **Define Patient Routes** in `patientRoutes.ts`:
+   - Example: `GET /patients` to retrieve all patients.
+   - Use a mock array (e.g., `patients = []`) for temporary storage.
+
+### **Step 5: Build the Doctor Service**
+1. **Set up Doctor Server**: Similar to the Patient Service, set up an Express server in `doctorRoutes.ts`.
+2. **Define Doctor Routes**:
+   - Example: `POST /doctors` to create a doctor entry.
+   - Use a mock array (e.g., `doctors = []`).
+
+### **Step 6: Build and Run the Application**
+1. **Compile TypeScript**: Run `npm run build`.
+2. **Run Patient Service**: Open terminal, `npm run dev` for patient service.
+3. **Run Doctor Service**: Open another terminal, `npm run dev` for doctor service.
+
+### **Step 7: Test the Endpoints**
+- **Patient Service**:
+  - `POST /patients`: Add patient.
+  - `GET /patients`: Get all patients.
+  - `GET /patients/:id`: Get a patient by ID.
+  - `PUT /patients/:id`: Update patient.
+  - `DELETE /patients/:id`: Delete patient.
+  
+- **Doctor Service**:
+  - `POST /doctors`: Add doctor.
+  - `GET /doctors`: Get all doctors.
+  - `GET /doctors/:id`: Get doctor by ID.
+  - `DELETE /doctors/:id`: Delete doctor.
+
+### **Step 8: Microservices Architecture**
+- **Independent Functionality**: Each service operates independently.
+- **Communication**: Services communicate over HTTP (REST).
+- **Scalability**: Services can be scaled independently.
+- **Real-World Application**: Services like appointments, billing, etc., could be added later.
+
+### **Step 9: Use MongoDB in Models and Controllers**
+1. **Install MongoDB Driver**: `npm install mongoose`
+2. **Modify Models**: Use Mongoose to define schemas for patients and doctors.
+   - Example for Patient Schema: 
+     ```typescript
+     const PatientSchema = new mongoose.Schema({
+       name: String,
+       age: Number,
+       address: String,
+     });
+     ```
+3. **Update Controllers** to use MongoDB for CRUD operations:
+   - Replace mock array with MongoDB database operations.
+
+### **Step 10: Use Joi or Express Validator**
+1. **Install Joi**: `npm install joi`
+2. **Add Validation**: Define validation schemas for incoming requests.
+   - Example:
+     ```typescript
+     const patientSchema = Joi.object({
+       name: Joi.string().required(),
+       age: Joi.number().required(),
+     });
+     ```
+
+### **Step 11: Deploy to Vercel**
+1. **Serverless Function**: Refactor your services to use serverless functions.
+2. **Deploy to Vercel**: 
+   - Install Vercel CLI: `npm install -g vercel`.
+   - Run `vercel` in your project directory.
+   - Create serverless functions in `api/` directory for deployment.
+
+### **Step 12: Practice Microservices Communication**
+1. **Cross-Service Communication**:
+   - Use HTTP requests between services (e.g., Patient Service can make requests to Doctor Service).
+   - Example: `axios.get('http://doctor-service-url/doctors')` to fetch doctor data in Patient Service.
+
+---
+
+This cheat sheet will guide the students through each step, providing helpful hints while leaving enough room for exploration and problem-solving.
