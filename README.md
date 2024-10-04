@@ -167,4 +167,10 @@ Create a new branch and a folder for SQL database and Entities
 
 Use TypeOrm in our current services
 
+## Step 14: Use TypeOrm and Postgresql in the project:
+
+Create a "Healthcare_Management_System" Database in PostgreSQL and a user who have all privileges on this DB
+
+In a new branch, update TypeORM configuration to use postgreSQL
+
 **_Happy coding!_** 👩‍💻 😊
