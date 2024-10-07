@@ -175,19 +175,19 @@ In a new branch, update TypeORM configuration to use PostgreSQL
 
 ## Step 15: Create Appointment Microservice
 
-The Appointment microservice will handle all operations related to appointments and manage associations with the Doctors and Patients services. in your main branch
+The Appointment microservice will handle all operations related to appointments and manage associations with the Doctors and Patients services. 
 
-Define Appointment Schema with Mongoose
+**in your main branch:**
 
-Create CRUD Operations
+- Define Appointment Schema with Mongoose
+- Create CRUD Operations
+- Test the Appointment Microservice
+- Run the Appointment service, and use a tool like Postman to test the CRUD endpoints for managing appointments:
 
-6. Test the Appointment Microservice
-Run the Appointment service, and use a tool like Postman to test the CRUD endpoints for managing appointments:
-
-POST /appointments: Create an appointment.
-GET /appointments: Retrieve all appointments.
-GET /appointments/:id: Retrieve a specific appointment by ID.
-DELETE /appointments/:id: Delete an appointment by ID.
+-   POST /appointments: Create an appointment.
+-   GET /appointments: Retrieve all appointments.
+-   GET /appointments/:id: Retrieve a specific appointment by ID.
+-   DELETE /appointments/:id: Delete an appointment by ID.
 
 
 **_Happy coding!_** 👩‍💻 😊
