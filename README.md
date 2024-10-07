@@ -171,6 +171,23 @@ Use TypeOrm in our current services
 
 Create a "Healthcare_Management_System" Database in PostgreSQL and a user who have all privileges on this DB
 
-In a new branch, update TypeORM configuration to use postgreSQL
+In a new branch, update TypeORM configuration to use PostgreSQL
+
+## Step 15: Create Appointment Microservice
+
+The Appointment microservice will handle all operations related to appointments and manage associations with the Doctors and Patients services. in your main branch
+
+Define Appointment Schema with Mongoose
+
+Create CRUD Operations
+
+6. Test the Appointment Microservice
+Run the Appointment service, and use a tool like Postman to test the CRUD endpoints for managing appointments:
+
+POST /appointments: Create an appointment.
+GET /appointments: Retrieve all appointments.
+GET /appointments/:id: Retrieve a specific appointment by ID.
+DELETE /appointments/:id: Delete an appointment by ID.
+
 
 **_Happy coding!_** 👩‍💻 😊
