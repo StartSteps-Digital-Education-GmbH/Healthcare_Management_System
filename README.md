@@ -189,5 +189,73 @@ The Appointment microservice will handle all operations related to appointments 
 -   GET /appointments/:id: Retrieve a specific appointment by ID.
 -   DELETE /appointments/:id: Delete an appointment by ID.
 
+### Step 16: Advanced Query Techniques
 
+In this step, you’ll be working with various querying techniques such as filtering, sorting, skipping, limiting, and projecting. Your objective is to create endpoints that retrieve data from the **Patient**, **Doctor**, and **Appointment** services with these features.
+
+#### Task 1: Filtering Data
+1. Create an endpoint to retrieve all patients based on specific criteria:
+   - **Endpoint**: `GET /patients?age=30&name=John`
+   - **Objective**: Return all patients aged 30 with the name "John".
+2. For the Appointment service:
+   - **Endpoint**: `GET /appointments?status=confirmed`
+   - **Objective**: Retrieve only appointments that have a status of "confirmed".
+
+#### Task 2: Sorting Data
+1. Create an endpoint to retrieve all doctors sorted by specialty:
+   - **Endpoint**: `GET /doctors?sort=specialty`
+   - **Objective**: Return a sorted list of doctors by their specialty, in ascending order.
+2. Sort appointments by booking date in descending order:
+   - **Endpoint**: `GET /appointments?sort=-bookingDate`
+   - **Objective**: Retrieve appointments with the most recent booking dates first.
+
+#### Task 3: Skipping and Limiting Results
+1. Limit the number of patients retrieved:
+   - **Endpoint**: `GET /patients?limit=5`
+   - **Objective**: Return the first 5 patients from the patient database.
+2. Skip certain records and retrieve the next set:
+   - **Endpoint**: `GET /appointments?skip=10&limit=5`
+   - **Objective**: Skip the first 10 appointments and return the next 5.
+
+#### Task 4: Projecting Specific Fields
+1. Retrieve only the names and ages of all patients:
+   - **Endpoint**: `GET /patients?fields=name,age`
+   - **Objective**: Return a list of patients with only their name and age fields.
+2. For the Doctor service:
+   - **Endpoint**: `GET /doctors?fields=name,specialty`
+   - **Objective**: Retrieve only the names and specialties of all doctors.
+
+---
+
+### Step 17: Aggregations and Reporting
+
+In this step, you’ll implement aggregation techniques to calculate statistics or gather insights from your data. Use these examples to build the following endpoints:
+
+#### Task 1: Count Aggregation
+1. Count the total number of patients aged over 40:
+   - **Endpoint**: `GET /patients/over-40-count`
+   - **Objective**: Return a single value indicating the total count of patients who are over 40 years old.
+
+#### Task 2: Summing Data
+1. Calculate the total number of confirmed appointments:
+   - **Endpoint**: `GET /appointments/confirmed-count`
+   - **Objective**: Return a value representing the total number of appointments with a status of "confirmed".
+
+#### Task 3: Grouping and Calculating Averages
+1. Group patients by age and calculate the average number of appointments per age group:
+   - **Endpoint**: `GET /appointments/average-per-age`
+   - **Objective**: Return a list where each age group is represented along with the average number of appointments.
+
+#### Task 4: Advanced Aggregation Pipeline
+1. For each doctor, calculate the total number of patients they’ve seen:
+   - **Endpoint**: `GET /doctors/patient-count`
+   - **Objective**: Return a list where each doctor is paired with the total count of their patients.
+
+2. Generate a report that shows the number of appointments in each status:
+   - **Endpoint**: `GET /appointments/status-summary`
+   - **Objective**: Return a report summarizing the count of appointments by status (e.g., confirmed, pending, canceled).
+
+---
+
+This step will provide a robust way to work with data in MongoDB and Mongoose while strengthening your query-building skills!
 **_Happy coding!_** 👩‍💻 😊
